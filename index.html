@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Plus</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/216e4daa44.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section id="landing">
+      <div class="recipe__background">
+        <figure class="recipe__background__wrapper">
+          <div class="nav__content">
+            <div class="nav__left">
+              <figure class="nav__logo__wrapper">
+                <img src="assets/logo-white.png" alt="" class="nav__logo" />
+              </figure>
+              <a href="" class="nav__link">Home</a>
+              <a href="" class="nav__link">Contact</a>
+            </div>
+            <div class="nav__right">
+              <div class="nav__input__wrapper">
+                <input
+                  type="text"
+                  class="nav__input"
+                  placeholder="Find a Recipe"
+                  onkeyup="searchBarEnter(event)"
+                />
+                <i
+                  class="fa-solid fa-magnifying-glass nav__search"
+                  onclick="searchActive()"
+                ></i>
+              </div>
+              <i class="fa-regular fa-circle-user nav__user"></i>
+            </div>
+          </div>
+          <img
+            src="assets/food-header.jpg"
+            alt=""
+            class="recipe__background__img"
+          />
+          <div class="recipe__background__text">
+            <h1 class="recipe__background__title">
+              Recipe <span class="textcolor">+</span>
+            </h1>
+            <h3 class="recipe__background__para">
+              With over <span class="textcolor">100</span> recipes, the choice
+              for <span class="textcolor">your next meal</span> is endless!
+            </h3>
+            <div class="recipe__background__search">
+              <div class="recipe__input__wrapper form__submit">
+                <input
+                  type="text"
+                  class="recipe__input"
+                  placeholder="Find a Recipe"
+                  onkeyup="searchBarEnter(event)"
+                />
+                <i
+                  class="fa-solid fa-magnifying-glass recipe__search"
+                  onclick="searchBarClick()"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="recipes">
+      <div class="container">
+        <div class="row">
+          <div class="recipes__content">
+            <div class="recipes__top">
+              <h2 class="recipes__top__title">Search results for:</h2>
+              <h2 class="recipes__top__title_landing">Top searches:</h2>
+              <h2 class="recipe__search__result">""</h2>
+            </div>
+            <div class="recipes__list">
+              <i class="fa-solid fa-spinner recipes__list__loading"></i>
+              <div class="recipe">
+                <figure class="recipe__img__wrapper">
+                  <img
+                    src="assets/postertest1.jpg"
+                    alt=""
+                    class="recipe__img"
+                  />
+                  <h3 class="recipe__info__title">Pizza Express Margherita</h3>
+                  <div class="recipe__info__list">
+                    <div class="recipe__info recipe__info1">
+                      <i
+                        class="fa-solid fa-earth-americas recipe__info__icon"
+                      ></i>
+                      <p class="recipe__info__text">Italian</p>
+                    </div>
+                    <div class="recipe__info recipe__info2">
+                      <i class="fa-solid fa-star recipe__info__icon"></i>
+                      <p class="recipe__info__text">Miscellanous</p>
+                    </div>
+                    <div class="recipe__info recipe__info3">
+                      <i class="fa-solid fa-list"></i>
+                      <p class="recipe__info__text">Water...</p>
+                    </div>
+                  </div>
+                </figure>
+                <h4 class="recipe__title">Pizza Express Margherita</h4>
+              </div>
+              <div class="recipe">
+                <figure class="recipe__img__wrapper">
+                  <img
+                    src="assets/postertest2.jpg"
+                    alt=""
+                    class="recipe__img"
+                  />
+                  <h3 class="recipe__info__title">Vegan Lasagna</h3>
+                  <div class="recipe__info__list">
+                    <div class="recipe__info recipe__info1">
+                      <i
+                        class="fa-solid fa-earth-americas recipe__info__icon"
+                      ></i>
+                      <p class="recipe__info__text">Italian</p>
+                    </div>
+                    <div class="recipe__info recipe__info2">
+                      <i class="fa-solid fa-star recipe__info__icon"></i>
+                      <p class="recipe__info__text">Vegan</p>
+                    </div>
+                    <div class="recipe__info recipe__info3">
+                      <i class="fa-solid fa-list"></i>
+                      <p class="recipe__info__text">green red lentils...</p>
+                    </div>
+                  </div>
+                </figure>
+                <h4 class="recipe__title">Vegan Lasagna</h4>
+              </div>
+              <div class="recipe">
+                <figure class="recipe__img__wrapper">
+                  <img
+                    src="assets/postertest3.jpg"
+                    alt=""
+                    class="recipe__img"
+                  />
+                  <h3 class="recipe__info__title">Big Mac</h3>
+                  <div class="recipe__info__list">
+                    <div class="recipe__info recipe__info1">
+                      <i
+                        class="fa-solid fa-earth-americas recipe__info__icon"
+                      ></i>
+                      <p class="recipe__info__text">American</p>
+                    </div>
+                    <div class="recipe__info recipe__info2">
+                      <i class="fa-solid fa-star recipe__info__icon"></i>
+                      <p class="recipe__info__text">Beef</p>
+                    </div>
+                    <div class="recipe__info recipe__info3">
+                      <i class="fa-solid fa-list"></i>
+                      <p class="recipe__info__text">Minced Beef...</p>
+                    </div>
+                  </div>
+                </figure>
+                <h4 class="recipe__title">Big Mac</h4>
+              </div>
+              <div class="recipe">
+                <figure class="recipe__img__wrapper">
+                  <img
+                    src="assets/postertest4.jpg"
+                    alt=""
+                    class="recipe__img"
+                  />
+                  <h3 class="recipe__info__title">Poutine</h3>
+                  <div class="recipe__info__list">
+                    <div class="recipe__info recipe__info1">
+                      <i
+                        class="fa-solid fa-earth-americas recipe__info__icon"
+                      ></i>
+                      <p class="recipe__info__text">Canadian</p>
+                    </div>
+                    <div class="recipe__info recipe__info2">
+                      <i class="fa-solid fa-star recipe__info__icon"></i>
+                      <p class="recipe__info__text">Miscellanous</p>
+                    </div>
+                    <div class="recipe__info recipe__info3">
+                      <i class="fa-solid fa-list"></i>
+                      <p class="recipe__info__text">Vegetable Oil...</p>
+                    </div>
+                  </div>
+                </figure>
+                <h4 class="recipe__title">Poutine</h4>
+              </div>
+              <div class="recipe">
+                <figure class="recipe__img__wrapper">
+                  <img
+                    src="assets/postertest5.jpg"
+                    alt=""
+                    class="recipe__img"
+                  />
+                  <h3 class="recipe__info__title">Kentucky Fried Chicken</h3>
+                  <div class="recipe__info__list">
+                    <div class="recipe__info recipe__info1">
+                      <i
+                        class="fa-solid fa-earth-americas recipe__info__icon"
+                      ></i>
+                      <p class="recipe__info__text">American</p>
+                    </div>
+                    <div class="recipe__info recipe__info2">
+                      <i class="fa-solid fa-star recipe__info__icon"></i>
+                      <p class="recipe__info__text">Chicken</p>
+                    </div>
+                    <div class="recipe__info recipe__info3">
+                      <i class="fa-solid fa-list"></i>
+                      <p class="recipe__info__text">Chicken...</p>
+                    </div>
+                  </div>
+                </figure>
+                <h4 class="recipe__title">Kentucky Fried Chicken</h4>
+              </div>
+              <div class="recipe">
+                <figure class="recipe__img__wrapper">
+                  <img
+                    src="assets/postertest6.jpg"
+                    alt=""
+                    class="recipe__img"
+                  />
+                  <h3 class="recipe__info__title">Salmon Eggs Eggs Benedict</h3>
+                  <div class="recipe__info__list">
+                    <div class="recipe__info recipe__info1">
+                      <i
+                        class="fa-solid fa-earth-americas recipe__info__icon"
+                      ></i>
+                      <p class="recipe__info__text">American</p>
+                    </div>
+                    <div class="recipe__info recipe__info2">
+                      <i class="fa-solid fa-star recipe__info__icon"></i>
+                      <p class="recipe__info__text">Breakfast</p>
+                    </div>
+                    <div class="recipe__info recipe__info3">
+                      <i class="fa-solid fa-list"></i>
+                      <p class="recipe__info__text">Eggs...</p>
+                    </div>
+                  </div>
+                </figure>
+                <h4 class="recipe__title">Salmon Eggs Eggs Benedict</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="recipes__details">
+      <div class="recipes__detail"></div>
+    </section>
+  </body>
+</html>
