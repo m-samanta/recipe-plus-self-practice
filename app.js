@@ -60,13 +60,13 @@ async function recipesSearch(value) {
     `https://themealdb.com/api/json/v1/1/search.php?s=${value}`
   );
   const searchResults = await response.json();
-  const array = searchResults.meals.slice(0, 6);
+  const mealsArray = searchResults.meals.slice(0, 6);
 
-  globalRecipesData = array;
+  globalRecipesData = mealsArray;
 
   const recipes = document.querySelector(".recipes__list");
 
-  const recipesHTML = array
+  const recipesHTML = mealsArray
     .map(
       (meal) => `
     <div class="recipe recipe__invisible" onclick= "openRecipes()"data-id="${meal.idMeal}">
@@ -102,12 +102,12 @@ async function recipesSearch(value) {
 
 // Removing spinner & displaying search results
 function loadingDone() {
-  const targetrecipe = document.querySelectorAll(".recipe");
+  const targetRecipe = document.querySelectorAll(".recipe");
 
   const targetLoading = document.querySelector(".recipes__list__loading");
 
   targetLoading.classList.remove("recipes__list__loading-visible");
-  targetrecipe.forEach((recipe) =>
+  targetRecipe.forEach((recipe) =>
     recipe.classList.remove("recipe__invisible")
   );
 }
